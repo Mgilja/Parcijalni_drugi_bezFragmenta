@@ -54,6 +54,13 @@ class MainActivity : AppCompatActivity() {
                 toast.show()
             }
              else {
+
+                 if(title.isBlank()) {
+                     editTextTitle.error = "Enter the note title"
+                 }
+                if(details.isBlank()) {
+                    editTextDetails.error = "Enter the notes details"
+                }
                 val text = "Seomthing is empty, please double check it"
                 val length = Toast.LENGTH_SHORT
                 val toast = Toast.makeText(this, text, length)
