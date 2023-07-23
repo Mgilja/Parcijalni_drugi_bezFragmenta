@@ -1,16 +1,11 @@
 package com.example.parcijalni_drugi_bezfragmenta
 
-import android.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-
-
-import kotlin.math.log
 
 class NotesAdapter(val notesList:List<Note>, val deleteNote:(Int) -> Unit):
     RecyclerView.Adapter<NotesAdapter.NoteViewHolder>() {
@@ -34,7 +29,7 @@ class NotesAdapter(val notesList:List<Note>, val deleteNote:(Int) -> Unit):
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.single_note, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.note, parent, false)
 
         return NoteViewHolder(itemView)
     }
